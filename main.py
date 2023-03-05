@@ -139,9 +139,11 @@ online = True
 
 # TODO 1.  “What would you like? (espresso/latte/cappuccino):”
 
+input_money()
+
 while online:
-    input_money()
-    choice = input("What would you like? (espresso/latte/cappuccino): ")
+
+    choice = input("What would you like? (Coffee: espresso/latte/cappuccino Service: report/money/off): ")
     if choice == "espresso":
         make_espresso()
     if choice == "latte":
@@ -150,5 +152,7 @@ while online:
         make_cappuccino()
     if choice == "report":
         print_report()
+    if choice == "money":
+        input_money()
     if choice == "off":
         online = False
